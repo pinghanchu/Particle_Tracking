@@ -1,0 +1,1 @@
+%fname = "Data_Wire/Shot119_Cam_18158.tif"fname = "Shot306.tif"info = imfinfo(fname)
