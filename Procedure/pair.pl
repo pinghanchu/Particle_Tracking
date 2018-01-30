@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-my $inputfile = "TrackPair_PID_Clean.csv";
+my $inputfile = "PairList.csv";
 
 open(my $fin, "<", $inputfile) or die "Failed to open file: $!\n";
 while(my $line = <$fin>) {

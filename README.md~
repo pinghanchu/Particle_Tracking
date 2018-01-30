@@ -83,4 +83,5 @@ iv. Frame overlap number with FF<5
 v. Track size(xmin,xmax,ymin,ymax)
 vi. Track frame number
 
+./Procedure/Track_Pairing_Cleaning.ipynb
 Develope a cut to select pairs. Require i)<5, ii)<50, iii)>1000, iv>100.
