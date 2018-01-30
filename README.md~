@@ -67,13 +67,13 @@ Remove:	i) the tracks too few points (> 500 points);
 	ii) the tracks too short (maximum (x,y) to minimum (x,y) > 20);
 
 Save the information to
-./Procedure/trackL_inv_clean.csv
-./Procedure/trackR_inv_clean.csv
+./Procedure/trackL3_frame_inv.csv
+./Procedure/trackR3_frame_inv.csv
 
 7. Track Pairing:
 ./Procedure/Track_Pairing_Track.ipynb
 
-a. Start with a track in the left frame. (PIDL)
+a. Start with a track in the left frame. (PIDL) Can apply additional cut to remove short tracks.
 b. Compare this track with all other tracks in the right frame
 Calculate:
 i. Average FF: for overlap region, calculate the average FF
@@ -83,5 +83,15 @@ iv. Frame overlap number with FF<5
 v. Track size(xmin,xmax,ymin,ymax)
 vi. Track frame number
 
-./Procedure/Track_Pairing_Cleaning.ipynb
-Develope a cut to select pairs. Require i)<5, ii)<50, iii)>1000, iv>100.
+It generates TrackPair_PID_[i].csv for track [i] in the left camera.
+
+./Procedure/MergeCsvFile.ipynb
+It combines all TrackPair_PID_*.csv to TrackPair_PID.csv
+
+./Procedure/Track_Pairing_Cut.ipynb
+Apply a cut on TrackPair_PID.csv to select pairs. Require i)<5, ii)<50, iii)>1000, iv>100.
+
+
+./Procedure/Track_Pairing_Draw.ipynb
+Draw four figures for one pair: Left track, right track, mass and the FF.
+This provides additional human-interactive cut.  
