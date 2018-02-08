@@ -97,3 +97,7 @@ It also generates Pair_[i].csv for the track [i] in the left camera and all othe
 ./Procedure/TrackPair_PID_Plot.ipynb
 Draw four figures for one pair: Left track, right track, mass and the FF from Pair_[i].csv
 This provides additional human-interactive cut.  
+
+8. Plot and fit 3D
+./Procedure/3DTrack_Fitting.ipynb
+Fit 3D tracks. 

@@ -84,14 +84,16 @@ v. Track size(xmin,xmax,ymin,ymax)
 vi. Track frame number
 
 It generates TrackPair_PID_[i].csv for track [i] in the left camera.
+It contains the corresponding parameters for PIDL and all other PIDR.
 
 ./Procedure/MergeCsvFile.ipynb
 It combines all TrackPair_PID_*.csv to TrackPair_PID.csv
 
 ./Procedure/Track_Pairing_Cut.ipynb
 Apply a cut on TrackPair_PID.csv to select pairs. Require i)<5, ii)<50, iii)>1000, iv>100.
+It generates PairList.csv which contains the possible pair (PIDL, PIDR).
+It also generates Pair_[i].csv for the track [i] in the left camera and all other pairs [j] in the right camera.
 
-
-./Procedure/Track_Pairing_Draw.ipynb
-Draw four figures for one pair: Left track, right track, mass and the FF.
+./Procedure/TrackPair_PID_Plot.ipynb
+Draw four figures for one pair: Left track, right track, mass and the FF from Pair_[i].csv
 This provides additional human-interactive cut.  
